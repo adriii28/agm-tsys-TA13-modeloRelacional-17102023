@@ -1,0 +1,28 @@
+1.
+Atleta(num_dorsalPK, nombre, dar_relevoFK)
+
+2.
+Elemento(nombre_elementoPK, peso_atomico, simbolo, n_atomico)
+Gaseoso(nombre_compuestoPK, coef_expan, temp_lic)
+Liquido(nombre_compuestoPK, densidad, temp_evap)
+Solido(nombre_compuestoPK, color, olor, dureza)
+CompuestoPor(nombre_elementoPK, nombre_compuestoPK, proporcion)
+
+
+3.
+Sucursal(num_sucursalPK, ciudad, activo)
+Cliente(dniPK, nombre, apellidos, direccion, ciudad)
+Cuenta(num_cuentaPK, saldo)
+Abrir(dniFK, num_cuentaFK, num_sucursalFK)
+Transaccion(num_transaccionPK, num_cuenta, fecha, tipo_operacion, cantidad)
+
+4.
+Parque Bomberos(cod_parquePK, nombre, direccion, telefono, categoria)
+Equipo(codigo_epPK, nombre)
+Bombero(cod_bomPK, nombre, apellidos, fecha_nac, dni, direccion,telefono,cod_parque,cod_equipoFK)
+Coche(num_cochePK, marca, modelo, num_matricula, fecha_compra, fecha_ult_rev, cod_parqueFK)
+Peticion Servicio(cod_pet_serv, tipo_serv, grado_urgencia,cod_eqFK) 
+Recibe(cod_parque,cod_pet_serv, fecha, hora)
+Turno(cod_turnoPK, descripcion)
+Periodo(fecha_inicioPK, fecha_finPK)
+TrabajaEn(cod_bomberoFK, cod_turnoFK,fecha_inicioFK,fecha_finFK)
