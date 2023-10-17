@@ -26,3 +26,11 @@ Recibe(cod_parque,cod_pet_serv, fecha, hora)
 Turno(cod_turnoPK, descripcion)
 Periodo(fecha_inicioPK, fecha_finPK)
 TrabajaEn(cod_bomberoFK, cod_turnoFK,fecha_inicioFK,fecha_finFK)
+
+5.
+Fondo(tituloPK, autorPK, cantidad)
+Libro(signaturaPK, disponible, tituloFK, autorFK)
+Socios(num_socioPK, nombre, apellido, telefono, fecha_cad)
+PrestamoS(num_prestamoPK, fecha_prest, num_prestamoFK, num_socioFK)
+PrestamoE(num_prestamoPK, fecha_prest, num_prestamoFK, fecha_devol, num_socioFK)
+Sancion(num_dias, num_socioFK)
