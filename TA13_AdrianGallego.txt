@@ -41,3 +41,7 @@ Producto(cod_productoPK, cantidad)
 Proveedor(cod_proveedorPK) 
 Encarga(cod_provedorFK, unidades, fecha_encargo, cod_productoFK)
 Pedido(cod_pedidoPK, fecha_pedido, cod_clienteFK, cod_productoFK)
+
+7. 
+Arrendatario(nifPK, nombre_fiscal, nombre_firmante, cargo_firmante, direccion, codigo_postal, localidad, provincia, telefono_fijo, telfono_movil, fax, actividad)
+Nave()
