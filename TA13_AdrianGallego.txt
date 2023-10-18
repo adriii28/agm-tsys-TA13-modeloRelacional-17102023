@@ -1,0 +1,60 @@
+1.
+Atleta(num_dorsalPK, nombre, dar_relevoFK)
+
+2.
+Elemento(nombre_elementoPK, peso_atomico, simbolo, n_atomico)
+Gaseoso(nombre_compuestoPK, coef_expan, temp_lic)
+Liquido(nombre_compuestoPK, densidad, temp_evap)
+Solido(nombre_compuestoPK, color, olor, dureza)
+CompuestoPor(nombre_elementoPK, nombre_compuestoPK, proporcion)
+
+
+3.
+Sucursal(num_sucursalPK, ciudad, activo)
+Cliente(dniPK, nombre, apellidos, direccion, ciudad)
+Cuenta(num_cuentaPK, saldo)
+Abrir(dniFK, num_cuentaFK, num_sucursalFK)
+Transaccion(num_transaccionPK, num_cuenta, fecha, tipo_operacion, cantidad)
+
+4.
+Parque Bomberos(cod_parquePK, nombre, direccion, telefono, categoria)
+Equipo(codigo_epPK, nombre)
+Bombero(cod_bomPK, nombre, apellidos, fecha_nac, dni, direccion,telefono,cod_parque,cod_equipoFK)
+Coche(num_cochePK, marca, modelo, num_matricula, fecha_compra, fecha_ult_rev, cod_parqueFK)
+Peticion Servicio(cod_pet_serv, tipo_serv, grado_urgencia,cod_eqFK) 
+Recibe(cod_parque,cod_pet_serv, fecha, hora)
+Turno(cod_turnoPK, descripcion)
+Periodo(fecha_inicioPK, fecha_finPK)
+TrabajaEn(cod_bomberoFK, cod_turnoFK,fecha_inicioFK,fecha_finFK)
+
+5.
+Fondo(tituloPK, autorPK, cantidad)
+Libro(signaturaPK, disponible, tituloFK, autorFK)
+Socios(num_socioPK, nombre, apellido, telefono, fecha_cad)
+PrestamoS(num_prestamoPK, fecha_prest, num_prestamoFK, num_socioFK)
+PrestamoE(num_prestamoPK, fecha_prest, num_prestamoFK, fecha_devol, num_socioFK)
+Sancion(num_dias, num_socioFK)
+
+6.
+Cliente(cod_clientePK)
+Producto(cod_productoPK, cantidad)
+Proveedor(cod_proveedorPK) 
+Encarga(cod_provedorFK, unidades, fecha_encargo, cod_productoFK)
+Pedido(cod_pedidoPK, fecha_pedido, cod_clienteFK, cod_productoFK)
+
+7. 
+Arrendatario(nifPK, nombre_fiscal, nombre_firmante, cargo_firmante, direccion, codigo_postal, localidad, provincia, telefono_fijo, telfono_movil, fax, actividad)
+Nave(codigo_navePK, poligono, calle, numero, localidad, codigo_postal, provincia, telefono, caracteristicas, foto, datos_escritura, alquilada, gastos_comunidad)
+Alquila(codigo_naveFK_PK, numero_cuenta, dias_pago, fecha_alquiler, fecha_fin_alquiler, importe_alquiler, cif_arrendatarioFK)
+Recibo(numero_reciboPK, importe_total, importe_IVA, pagado, fecha, codigo_naveFK, cif_arrendatarioFK)
+
+8.
+Piso(puertaPK, dni, nombre, apellidos, direccion, codigo_postal, localidad, provincia, telefono)
+Cargo(codigo_cargoPK, nombre, funciones)
+Ostenta(puertaFK_PK, codigo_cargoFK_PK, fecha_posesion)
+IngresoRecibo(codigo_anotacionPK, fecha, importe, mes, pagado, puertaFK)
+IngresoExtra(codigo_anotacionPK, fecha, importe, concepto)
+TipoGastoFijo(codigo_tipo_gastoPK, nombre, descripcion)
+GastoFijo(codigo_anotacionPK, fecha, importe, fecha_inicio, fecha_fin, consumo, codigo_tipo_gastoFK)
+GastoVariable(codigo_anotacionPK, fecha, importe, fecha_facturacion, concepto, numero_factura) 
+DetalleRecibo(numero_lineaPK, concepto, importe, codigo_anotacionFK)
