@@ -48,4 +48,13 @@ Nave(codigo_navePK, poligono, calle, numero, localidad, codigo_postal, provincia
 Alquila(codigo_naveFK_PK, numero_cuenta, dias_pago, fecha_alquiler, fecha_fin_alquiler, importe_alquiler, cif_arrendatarioFK)
 Recibo(numero_reciboPK, importe_total, importe_IVA, pagado, fecha, codigo_naveFK, cif_arrendatarioFK)
 
-
+8.
+Piso(puertaPK, dni, nombre, apellidos, direccion, codigo_postal, localidad, provincia, telefono)
+Cargo(codigo_cargoPK, nombre, funciones)
+Ostenta(puertaFK_PK, codigo_cargoFK_PK, fecha_posesion)
+IngresoRecibo(codigo_anotacionPK, fecha, importe, mes, pagado, puertaFK)
+IngresoExtra(codigo_anotacionPK, fecha, importe, concepto)
+TipoGastoFijo(codigo_tipo_gastoPK, nombre, descripcion)
+GastoFijo(codigo_anotacionPK, fecha, importe, fecha_inicio, fecha_fin, consumo, codigo_tipo_gastoFK)
+GastoVariable(codigo_anotacionPK, fecha, importe, fecha_facturacion, concepto, numero_factura) 
+DetalleRecibo(numero_lineaPK, concepto, importe, codigo_anotacionFK)
