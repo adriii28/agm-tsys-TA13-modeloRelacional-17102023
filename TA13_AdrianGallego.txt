@@ -44,4 +44,8 @@ Pedido(cod_pedidoPK, fecha_pedido, cod_clienteFK, cod_productoFK)
 
 7. 
 Arrendatario(nifPK, nombre_fiscal, nombre_firmante, cargo_firmante, direccion, codigo_postal, localidad, provincia, telefono_fijo, telfono_movil, fax, actividad)
-Nave()
+Nave(codigo_navePK, poligono, calle, numero, localidad, codigo_postal, provincia, telefono, caracteristicas, foto, datos_escritura, alquilada, gastos_comunidad)
+Alquila(codigo_naveFK_PK, numero_cuenta, dias_pago, fecha_alquiler, fecha_fin_alquiler, importe_alquiler, cif_arrendatarioFK)
+Recibo(numero_reciboPK, importe_total, importe_IVA, pagado, fecha, codigo_naveFK, cif_arrendatarioFK)
+
+
